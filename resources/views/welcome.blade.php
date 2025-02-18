@@ -59,6 +59,9 @@
                     </header>
 
                     <main class="mt-6">
+                        <p style="margin-bottom: 20px; font-weight: bold; text-align: center;">
+                            <a href="/groups">Домашнее задание</a>
+                        </p>
                         <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                             <a
                                 href="https://laravel.com/docs"
