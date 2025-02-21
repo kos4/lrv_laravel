@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "ce8b719f-80df-4239-826e-7d5831d00d8b",
+		"name": "netology homework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11947098"
+	},
+	"item": [
+		{
+			"name": "create token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1@test.ru",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/tokens/create?email=user1@test.ru&password=12345678&device_name=postman",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"tokens",
+						"create"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "user1@test.ru"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						},
+						{
+							"key": "device_name",
+							"value": "postman"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create car",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|4UfA5oMmVeCTAJ5SQ7LG2mmaxyAWci2fBbYMog0Gd395195f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/car?brand=Volvo&model=XC90&price=4000000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "Volvo"
+						},
+						{
+							"key": "model",
+							"value": "XC90"
+						},
+						{
+							"key": "price",
+							"value": "4000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|4UfA5oMmVeCTAJ5SQ7LG2mmaxyAWci2fBbYMog0Gd395195f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cars",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|4UfA5oMmVeCTAJ5SQ7LG2mmaxyAWci2fBbYMog0Gd395195f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/car",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "car",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|4UfA5oMmVeCTAJ5SQ7LG2mmaxyAWci2fBbYMog0Gd395195f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/car/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update car",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|4UfA5oMmVeCTAJ5SQ7LG2mmaxyAWci2fBbYMog0Gd395195f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/car/1?brand=BMW&model=X7&price=9000000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"1"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "BMW"
+						},
+						{
+							"key": "model",
+							"value": "X7"
+						},
+						{
+							"key": "price",
+							"value": "9000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete car",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|4UfA5oMmVeCTAJ5SQ7LG2mmaxyAWci2fBbYMog0Gd395195f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/car/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
