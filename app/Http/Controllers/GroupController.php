@@ -51,7 +51,7 @@ class GroupController extends Controller
      */
     public function show(Group $group)
     {
-        $students = $group->students()->get();
+        $students = $group->students;
 
         return view('groups.card', [
             'pageTitle' => 'Информация о группе ' . $group->title,
